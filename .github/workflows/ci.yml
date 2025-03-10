@@ -12,7 +12,7 @@ on:
       environment:
         description: 'Environment to deploy to'
         required: true
-        default: 'staging'
+        default: 'main'
 
 jobs:
   build:
