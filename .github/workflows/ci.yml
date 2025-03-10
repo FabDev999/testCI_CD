@@ -3,16 +3,16 @@ name: CI/CD Pipeline for Spring Boot
 on:
   push:
     branches:
-      - main  # Runs on push to the main branch
+      - master  # Runs on push to the main branch
   pull_request:
     branches:
-      - main  # Runs on pull request to main
+      - master  # Runs on pull request to main
   workflow_dispatch:
     inputs:
       environment:
         description: 'Environment to deploy to'
         required: true
-        default: 'main'
+        default: 'master'
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'  # or the specific version you want
-          distribution: 'oracle'  # or 'zulu' or 'oracle'
+          distribution: 'adoptopenjdk'  # or 'zulu' or 'oracle'
     
       - name: Build with Maven
         run: mvn clean install -DskipTests
