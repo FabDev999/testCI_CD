@@ -3,13 +3,14 @@ name: CI/CD Pipeline for Spring Boot
 on:
   push:
     branches:
-      - main  # Runs the workflow on pushes to the main branch
+      - main  # Runs on push to the main branch
   pull_request:
     branches:
-      - main  # Runs on PRs to the main branch
+      - main  # Runs on pull request to main
 
 jobs:
   build:
+    name: Build and Test
     runs-on: ubuntu-latest
     
     steps:
