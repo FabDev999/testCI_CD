@@ -46,7 +46,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t FabDev999/testCI_CD:latest .
+          docker build -t fabdev999/testci_cd:latest .
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -56,4 +56,4 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push FabDev999/testCI_CD:latest
+          docker push fabdev999/testci_cd:latest
