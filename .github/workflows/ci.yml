@@ -26,7 +26,12 @@ jobs:
     
     - name: Run tests
       run: mvn test
-  docker:
+   docker:
+    name: Build and Push Docker Image
+    needs: build  # Runs only if the build job succeeds
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Build Docker image
       run: |
         docker build -t FabDev999/testCI_CD:latest .
