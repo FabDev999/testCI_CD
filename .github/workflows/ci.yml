@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'  # or the specific version you want
-          distribution: 'adoptopenjdk'  # or 'zulu' or 'oracle'
+          distribution: 'temurin'  # or 'zulu' or 'oracle'
     
       - name: Build with Maven
         run: mvn clean install -DskipTests
