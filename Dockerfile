@@ -2,10 +2,10 @@
 FROM eclipse-temurin:17-jre
 
 # Set the working directory
-WORKDIR /target
+WORKDIR /app
 
 # Copy the JAR file into the container (fixed file name)
-COPY target/demo-0.0.1-SNAPSHOT.jar /target/demo-0.0.1-SNAPSHOT.jar
+COPY target/demo-0.0.1-SNAPSHOT.jar /app/demo-0.0.1-SNAPSHOT.jar
 
 # Expose the application port
 EXPOSE 8080
