@@ -41,7 +41,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+      - name: Create target directory
+        run: mkdir -p target
+        
+      - name: Create target directory
+        run: mkdir -p app
         
       - name: Check out repository
         uses: actions/checkout@v2
