@@ -1,11 +1,11 @@
-# Use a base image with JDK 17 (or switch to JDK 11 if needed)
+# Use a base image with JDK 17 (or switch to JDK 17 if needed)
 FROM eclipse-temurin:17-jre
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /target
 
 # Copy the JAR file into the container (fixed file name)
-COPY target/demo-0.0.1-SNAPSHOT.jar /app/demo-0.0.1-SNAPSHOT.jar
+COPY target/demo-0.0.1-SNAPSHOT.jar /target/demo-0.0.1-SNAPSHOT.jar
 
 # Expose the application port
 EXPOSE 8080
